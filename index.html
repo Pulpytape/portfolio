@@ -176,7 +176,7 @@ nav{
 }
 .hero-desc{
   font-size:1.05rem;
-  font-weight:300;
+  font-weight:400;
   line-height:1.9;
   color:#fff5f9;
   max-width:520px;
@@ -249,8 +249,8 @@ section{padding:7rem 5rem;position:relative;z-index:5}
 #about{background:linear-gradient(180deg,var(--dark) 0%,var(--dark2) 100%)}
 .about-wrap{display:grid;grid-template-columns:3fr 2fr;gap:5rem;align-items:start}
 .about-text p{
-  font-size:1.05rem;font-weight:300;line-height:2;
-  color:rgba(255,235,245,.9);
+  font-size:1.05rem;font-weight:400;line-height:2;
+  color:#ffe8f5;
   margin-bottom:1.5rem;
   border-left:2px solid transparent;
   padding-left:1.2rem;
@@ -324,7 +324,7 @@ section{padding:7rem 5rem;position:relative;z-index:5}
   font-family:var(--font-serif);
   font-size:1.35rem;color:var(--white);margin-bottom:.5rem;line-height:1.15;
 }
-.skill-teaser{font-size:.78rem;color:rgba(255,230,242,.88);line-height:1.7;font-weight:300}
+.skill-teaser{font-size:.78rem;color:rgba(255,230,242,1);line-height:1.7;font-weight:400}
 .skill-hint{
   font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;
   color:var(--cyan);
@@ -377,13 +377,13 @@ section{padding:7rem 5rem;position:relative;z-index:5}
 .modal-title{font-family:var(--font-serif);font-size:2.2rem;line-height:1;color:var(--white)}
 .modal-title-jp{font-family:var(--font-jp);font-size:.65rem;font-weight:300;color:var(--cyan);letter-spacing:.35em;margin-top:.4rem}
 .modal-desc{
-  font-size:.95rem;font-weight:300;line-height:2;
-  color:rgba(255,238,248,.92);margin-bottom:2rem;
-  border-left:2px solid rgba(255,45,120,.3);padding-left:1.2rem;
+  font-size:.95rem;font-weight:400;line-height:2;
+  color:#fff0f8;margin-bottom:2rem;
+  border-left:2px solid rgba(255,45,120,.5);padding-left:1.2rem;
 }
 .modal-tools-title{
   font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;
-  color:rgba(120,255,240,.9);margin-bottom:.8rem;
+  color:rgba(120,255,240,1);margin-bottom:.8rem;
 }
 .modal-tools-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
 .tool-tag{
@@ -397,7 +397,7 @@ section{padding:7rem 5rem;position:relative;z-index:5}
 }
 .tool-tag:hover{background:rgba(255,45,120,.15);border-color:var(--pink)}
 .bar-row{display:flex;justify-content:space-between;margin-bottom:.6rem}
-.bar-label{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,215,235,.82)}
+.bar-label{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,225,242,1)}
 .bar-track{height:2px;background:rgba(255,180,215,.2);position:relative;overflow:visible}
 .bar-fill{
   height:100%;
@@ -406,14 +406,31 @@ section{padding:7rem 5rem;position:relative;z-index:5}
   transition:width 1.1s .2s cubic-bezier(.22,1,.36,1);
   box-shadow:0 0 10px var(--pink);
 }
-/* SAE list */
-.modal-saes{margin-bottom:2rem}
-.modal-saes-title{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(0,255,245,.5);margin-bottom:.8rem}
+/* GitHub link in modal */
+.modal-github{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--cyan);
+  text-decoration:none;
+  border:1px solid rgba(0,255,245,.35);
+  padding:.45rem 1.1rem;
+  margin-bottom:1.8rem;
+  transition:background .25s,border-color .25s,color .25s,box-shadow .25s;
+  clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);
+}
+.modal-github:hover{
+  background:rgba(0,255,245,.1);
+  border-color:var(--cyan);
+  color:#fff;
+  box-shadow:0 0 16px rgba(0,255,245,.3);
+}
+.modal-github-wrap{margin-bottom:.2rem}
+.modal-saes-title{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(0,255,245,.85);margin-bottom:.8rem}
 .sae-item{
   display:flex;align-items:flex-start;gap:.8rem;
-  font-size:.8rem;color:rgba(255,235,245,.9);
+  font-size:.85rem;color:#ffe8f5;
   line-height:1.6;padding:.4rem 0;
-  border-bottom:1px solid rgba(255,150,200,.12);
+  border-bottom:1px solid rgba(255,150,200,.18);
 }
 .sae-item:last-child{border-bottom:none}
 .sae-dot{width:6px;height:6px;background:var(--pink);border-radius:50%;margin-top:.45rem;flex-shrink:0;box-shadow:0 0 6px var(--pink)}
@@ -439,11 +456,11 @@ section{padding:7rem 5rem;position:relative;z-index:5}
 .project-row:hover::after{width:2px}
 .proj-num{
   font-family:var(--font-pixel);font-size:2.5rem;
-  color:rgba(255,100,160,.3);line-height:1;text-align:center;
+  color:rgba(255,100,160,.75);line-height:1;text-align:center;
 }
 .proj-icon{font-size:1.8rem;display:block;margin-bottom:.3rem;text-align:center}
 .proj-title{font-family:var(--font-serif);font-size:1.45rem;color:var(--white);margin-bottom:.4rem}
-.proj-desc{font-size:.82rem;color:rgba(255,230,242,.88);line-height:1.75;font-weight:300}
+.proj-desc{font-size:.85rem;color:#ffe8f5;line-height:1.75;font-weight:400}
 .proj-tech{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
 .proj-tag{
   font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;
@@ -463,10 +480,11 @@ section{padding:7rem 5rem;position:relative;z-index:5}
   font-family:var(--font-serif);
   font-size:clamp(3rem,6vw,5.5rem);
   font-style:italic;line-height:1;
-  color:rgba(255,45,120,.12);
+  color:rgba(255,45,120,.72);
+  text-shadow:0 0 30px rgba(255,45,120,.25);
   transition:color .4s,text-shadow .4s;
 }
-.contact-big:hover{color:rgba(255,45,120,.35);text-shadow:0 0 40px rgba(255,45,120,.2)}
+.contact-big:hover{color:var(--pink);text-shadow:0 0 50px rgba(255,45,120,.5)}
 .contact-info{display:flex;flex-direction:column;gap:1.5rem}
 .contact-item{
   display:flex;align-items:flex-start;gap:1.2rem;
@@ -600,7 +618,7 @@ footer span{color:var(--pink)}
   <ul class="nav-links">
     <li><a href="#about">À propos</a></li>
     <li><a href="#skills">Compétences</a></li>
-    <li><a href="#projects">Projets</a></li>
+    <li><a href="#projects">Diplôme</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -617,7 +635,7 @@ footer span{color:var(--pink)}
       <span class="n2">Rolland</span>
     </h1>
     <p class="hero-kanji">デイヴィッド・ロラン · 情報学生</p>
-    <p class="hero-desc">Étudiant en <strong>BUT Informatique</strong> à l'IUT de Lannion. Je construis des interfaces, des systèmes et des bases de données — avec précision, curiosité et passion pour le numérique.</p>
+    <p class="hero-desc">Étudiant en <strong>BUT Informatique</strong> à l'IUT de Lannion, je suis passioné d'informatique et de jeux vidéo, j'aimerais obtenir une alternance ainsi que travailler dans ce domaine.</p>
     <a href="#skills" class="hero-cta">Explorer mon univers →</a>
   </div>
   <div class="hero-glitch-deco">情報技術</div>
@@ -637,12 +655,12 @@ footer span{color:var(--pink)}
   </div>
   <div class="about-wrap">
     <div class="about-text reveal">
-      <p>Je M'appelle <strong>David Rolland</strong>, étudiant en <strong>BUT Informatique</strong> à l'<strong>IUT de Lannion</strong></p>
+      <p>Je M'appelle <strong>David Rolland</strong>, je suis actuellement étudiant en <strong>BUT Informatique</strong> à l'<strong>IUT de Lannion</strong></p>
       <p>Grâce à ma formation, je développe des compétences en développement logiciel, bases de données, réseaux et administration système.</p>
       <p>Disponible pour des <strong>stages</strong> ainsi que des <strong>alternances</strong> </p>
     </div>
     <div class="about-seals reveal" style="transition-delay:.2s">
-      <div class="seal-card"><div class="seal-num">3</div><div class="seal-label">Années de formation · 修行</div></div>
+      <div class="seal-card"><div class="seal-num">1</div><div class="seal-label">Années de formation · 修行</div></div>
       <div class="seal-card"><div class="seal-num">BUT</div><div class="seal-label">Informatique · 情報学</div></div>
       <div class="seal-card"><div class="seal-num">IUT</div><div class="seal-label">de Lannion · ブルターニュ</div></div>
     </div>
@@ -657,7 +675,7 @@ footer span{color:var(--pink)}
     <div class="section-num">02</div>
     <div class="section-titles">
       <h2>Compétences</h2>
-      <small>技能 · 6 Compétences BUT Informatique — Cliquez pour explorer</small>
+      <small>技能 · 6 Compétences BUT Informatique — Cliquez pour les découvrir</small>
     </div>
   </div>
   <div class="skills-grid" id="skillsGrid"></div>
@@ -670,7 +688,7 @@ footer span{color:var(--pink)}
   <div class="section-label reveal">
     <div class="section-num">03</div>
     <div class="section-titles">
-      <h2>Projets</h2>
+      <h2>Diplôme</h2>
       <small>作品 · Sakuhin</small>
     </div>
   </div>
@@ -687,7 +705,7 @@ footer span{color:var(--pink)}
       <div></span><div class="proj-num">02</div></div>
       <div>
         <div class="proj-title">Etudes supérieures</div>
-        <div class="proj-desc">Une année réaliser en Prépa scientifique à St-Brieuc après l'obtention du bac.</div>
+        <div class="proj-desc">J'ai précédemment réalisé une année en Prépa scientifique à St-Brieuc après l'obtention du bac.</div>
       </div>
       <div class="proj-arrow">→</div>
     </div>
@@ -695,7 +713,7 @@ footer span{color:var(--pink)}
       <div></span><div class="proj-num">03</div></div>
       <div>
         <div class="proj-title">Autres</div>
-        <div class="proj-desc">Je suis en possession du BAFA ainsi que du permis de conduire.</div>
+        <div class="proj-desc">Je suis aussi en possession du BAFA ainsi que du permis de conduire.</div>
       </div>
       <div class="proj-arrow">→</div>
     </div>
@@ -745,6 +763,7 @@ footer span{color:var(--pink)}
       </div>
     </div>
     <div class="modal-desc" id="mDesc"></div>
+    <div class="modal-github-wrap" id="mGithubWrap"></div>
     <div class="modal-saes">
       <div class="modal-saes-title">SAÉ & Apprentissages critiques · 学習</div>
       <div id="mSaes"></div>
@@ -790,7 +809,8 @@ const skills=[
     desc:"J'ai appris à réaliser un développement d'applications, de la conception au développement. Nous avons réalisé un jeux de Sokoban en langage C, cela m'a permis d'améliorer mes capacités dans ce langage et de comprendre les différentes étapes de la conception d'applications.",
     saes:["SAÉ 1.01 · Implémentation d'un besoin client",],
     tools:["C",],
-    level:60
+    level:60,
+    github:"https://github.com/Pulpytape"
   },
   {
     icon:"⚡",
@@ -801,7 +821,8 @@ const skills=[
     desc:"J'ai appris à optimiser une application informatique. Nous avons réalisé l'amélioration des performances et l'optimisation du jeux développé dans la première compétence. Cela m'a permis d'approfondir encore plus mes compétences en C et de comprendre entièrement le processus de réalisation d'une application en allant jusqu'à l'optimisation.",
     saes:["SAÉ 1.02 · Comparaison d'approche algorythmique",],
     tools:["C",],
-    level:60
+    level:60,
+    github:"https://github.com/Pulpytape"
   },
   {
     icon:"🔒",
@@ -812,7 +833,8 @@ const skills=[
     desc:"J'ai appris à installer des infrastructures services et réseaux. Nous devions réaliser un programme Bash permettant de changer les fichiers dans le format souhaité automatiquement.",
     saes:["SAÉ 1.03 · Installation d'un poste de développement"],
     tools:["Docker","Bash",],
-    level:30
+    level:30,
+    github:"https://github.com/Pulpytape"
   },
   {
     icon:"🗄️",
@@ -820,10 +842,11 @@ const skills=[
     jp:"データ管理",
     num:"C4",
     teaser:"Concevoir, gérer et exploiter des bases de données",
-    desc:"Concevoir et administrer des systèmes de gestion de données. Modélisation conceptuelle et relationnelle, requêtes complexes, transactions, et intégration avec des applications. De la conception MCD jusqu'aux bases NoSQL.",
-    saes:["SAÉ 1.04 · Création d'une base de données","SAÉ 2.04 · Application avec ORM et migrations","SAÉ 3.04 · Système de données volumineuses","Modélisation et normalisation"],
-    tools:["MySQL","PostgreSQL","MongoDB","SQL","MCD/MLD","SQLAlchemy","phpMyAdmin","SQLite"],
-    level:70
+    desc:"Pour cette compétence nous avons eu à constuire une base de données à partir d'un schéma, nous avons dû initialiser cette base de données avec les documents qui nous étaient fournis. Cela m'a permis de dévelloper mes compétences en interprétation de schéma relationnel ainsi qu'en création de base de données.",
+    saes:["SAÉ 2.04 "],
+    tools:["MySQL","PostgreSQL"],
+    level:70,
+    github:"https://github.com/Pulpytape"
   },
   {
     icon:"🤝",
@@ -834,7 +857,8 @@ const skills=[
     desc:"Pour cette compétence nous avons dû réaliser un site internet en groupe de 4, nous avons donc dû partager efficacement le travail et nous organiser correctement en commençant pas le choix d'une charte graphique puis le maquettage du site et enfin le développement et la mise en commun. Cela m'a permis d'approfondir mes connaissances en HTML CSS, cela m'a aussi permis d'expérimenter la réalisation d'un projet en équipe de A à Z et de renforcer mes compétences en travail de groupe.",
     saes:["SAÉ 1.05"],
     tools:["HTML","CSS","Figma","Trello","GitHub Projects"],
-    level:85
+    level:85,
+    github:"https://github.com/Pulpytape"
   },
   {
     icon:"🌍",
@@ -842,10 +866,11 @@ const skills=[
     jp:"コラボレーション",
     num:"C6",
     teaser:"Travailler en équipe et s'intégrer dans une organisation",
-    desc:"",
-    saes:["SAÉ 1.06"],
-    tools:["Git collaboratif","Trello"],
-    level:74
+    desc:"Pour cette compétence nous avons effectuer une travail d'équipe qui constituait à créer de A a Z une activité de Team-building pour une entreprise de notre choix. Nous avions à réfléchir à toute la logistique ( L'organisation en générale, le respect des normes, l'inclusion et le budget ), nous avons aussi dû réaliser toute la promo de l'évènement en créant un flyer ainsi qu'une vidéo promotionelle. Cela nous a fait utiliser de nombreux outils collaboratifs et nous a permis de promouvoir nos compétences en travail d'équipe et organisation.",
+    saes:["SAÉ 2.06"],
+    tools:["Git collaboratif","Trello","Google Docs"],
+    level:80,
+    github:"https://github.com/Pulpytape"
   }
 ];
  
@@ -882,6 +907,13 @@ function openModal(s){
   document.getElementById("mLevel").textContent=s.level+"%";
   document.getElementById("mTools").innerHTML=s.tools.map(t=>`<span class="tool-tag">${t}</span>`).join("");
   document.getElementById("mSaes").innerHTML=s.saes.map(a=>`<div class="sae-item"><div class="sae-dot"></div><div>${a}</div></div>`).join("");
+  // GitHub link
+  const ghWrap=document.getElementById("mGithubWrap");
+  if(s.github){
+    ghWrap.innerHTML=`<a class="modal-github" href="${s.github}" target="_blank" rel="noopener noreferrer">⌥ Voir le code sur GitHub →</a>`;
+  } else {
+    ghWrap.innerHTML="";
+  }
   const bar=document.getElementById("mBar");
   bar.style.width="0";
   overlay.classList.add("active");
